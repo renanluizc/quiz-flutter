@@ -1,3 +1,3 @@
 # quiz_flutter
 
-A Flutter project to learn to develop using Flutter at Fatec classes in 20.
+A Flutter project to learn to develop using Flutter at Fatec classes in 2020.
