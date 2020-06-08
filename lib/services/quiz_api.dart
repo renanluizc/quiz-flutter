@@ -5,8 +5,7 @@ import 'dart:convert';
 class QuizApi {
   static Future<List<Question>> fetch() async {
     try {
-      var url =
-          "https://script.google.com/macros/s/AKfycbyhpDQV-1NW70UWkHeC58rt779uiu6WSTWyWyW5OxOjowDT3ihr/exec";
+      var url = 'https://script.google.com/macros/s/AKfycbx1tT2mClJyIX5GBVzNiR98an_Fi5X5eEYJuHRV1MzU0oPg1zTw/exec';
       var response = await http.get(url);
 
       if (response.statusCode == 200) {

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_flutter/pages/quiz_page.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override

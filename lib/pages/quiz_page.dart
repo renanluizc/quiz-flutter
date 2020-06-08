@@ -21,7 +21,7 @@ class _QuizPageState extends State<QuizPage> {
     _initialize();
   }
 
-  _initialize() async {
+  Future<void> _initialize() async {
     await _controller.initialize();
     setState(() {
       _loading = false;
@@ -38,6 +38,7 @@ class _QuizPageState extends State<QuizPage> {
         centerTitle: true,
         elevation: 0,
       ),
+      backgroundColor: Colors.grey.shade900,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(20.0),
