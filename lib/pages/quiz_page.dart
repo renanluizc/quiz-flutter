@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quiz_flutter/components/centered_circular_progress.dart';
 import 'package:quiz_flutter/components/centered_message.dart';
 import 'package:quiz_flutter/components/finish_dialog.dart';
@@ -56,7 +57,7 @@ class _QuizPageState extends State<QuizPage> {
     if (_controller.questionNumber == 0) {
       return CenteredMessage(
         'Sem questões',
-        icon: Icons.warning,
+        icon: FontAwesomeIcons.exclamationTriangle
       );
     }
 
