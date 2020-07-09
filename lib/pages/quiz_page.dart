@@ -111,8 +111,8 @@ class _QuizPageState extends State<QuizPage> {
 
           setState(() {
             _scoreKeeper.add(
-              Icon(
-                result ? Icons.check : Icons.close,
+              FaIcon(
+                result ? FontAwesomeIcons.checkCircle : FontAwesomeIcons.timesCircle,
                 color: result ? Colors.green : Colors.red,
               ),
             );
