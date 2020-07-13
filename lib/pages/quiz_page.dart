@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quiz_flutter/components/centered_circular_progress.dart';
 import 'package:quiz_flutter/components/centered_message.dart';
 import 'package:quiz_flutter/components/finish_dialog.dart';
+import 'package:quiz_flutter/components/question_container.dart';
 import 'package:quiz_flutter/components/result_dialog.dart';
 import 'package:quiz_flutter/controllers/quiz_controller.dart';
 
@@ -65,7 +66,7 @@ class _QuizPageState extends State<QuizPage> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        _buildQuestion(_controller.getQuestion()),
+        QuestionContainer(_controller.getQuestion()),
         _buildAnswerButton(_controller.getAnswer1()),
         SizedBox(
           height: 8.0,
@@ -82,22 +83,6 @@ class _QuizPageState extends State<QuizPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: _scoreKeeper,
-      ),
-    );
-  }
-
-  _buildQuestion(String text) {
-    return Expanded(
-      flex: 5,
-      child: Center(
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 32.0,
-          ),
-        ),
       ),
     );
   }
