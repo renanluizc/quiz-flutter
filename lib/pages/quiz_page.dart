@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quiz_flutter/components/centered_circular_progress.dart';
@@ -37,7 +36,7 @@ class _QuizPageState extends State<QuizPage> {
       appBar: AppBar(
         backgroundColor: Colors.grey.shade900,
         title: Text(
-            'Quiz: acertou ${_controller.hitNumber} / ${_controller.questionNumber}'),
+            'Quiz: acertou ${_controller.hitNumber} / ${_controller.questionsNumber}'),
         centerTitle: true,
         elevation: 0,
       ),
@@ -56,7 +55,7 @@ class _QuizPageState extends State<QuizPage> {
       return CenteredCircularProgress();
     }
 
-    if (_controller.questionNumber == 0) {
+    if (_controller.questionsNumber == 0) {
       return CenteredMessage(
         'Sem questões',
         icon: FontAwesomeIcons.exclamationTriangle
@@ -100,6 +99,7 @@ class _QuizPageState extends State<QuizPage> {
               FaIcon(
                 result ? FontAwesomeIcons.checkCircle : FontAwesomeIcons.timesCircle,
                 color: result ? Colors.green : Colors.red,
+                size: 16.0,
               ),
             );
           });
@@ -109,7 +109,7 @@ class _QuizPageState extends State<QuizPage> {
             question: _controller.question,
             correct: result,
             onNext: () {
-              if (_scoreKeeper.length == _controller.questionNumber) {
+              if (_scoreKeeper.length == _controller.questionsNumber) {
                 FinishDialog.show(
                   context,
                   hitNumber: _controller.hitNumber,

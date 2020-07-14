@@ -9,7 +9,7 @@ class QuizController {
   bool _shiftAnswer;
   Random _random = Random();
 
-  int get questionNumber => _questionBank?.length ?? 0;
+  int get questionsNumber => _questionBank?.length ?? 0;
   Question get question => _questionBank[questionIndex];
 
   Future<void> initialize() async {
