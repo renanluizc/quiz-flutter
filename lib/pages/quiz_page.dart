@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quiz_flutter/components/centered_circular_progress.dart';
@@ -36,7 +37,7 @@ class _QuizPageState extends State<QuizPage> {
       appBar: AppBar(
         backgroundColor: Colors.grey.shade900,
         title: Text(
-            'Quiz ${_controller.hitNumber} / ${_controller.questionNumber}'),
+            'Quiz: acertou ${_controller.hitNumber} / ${_controller.questionNumber}'),
         centerTitle: true,
         elevation: 0,
       ),
